@@ -1,9 +1,4 @@
 ---
-audio_gpg_keys:
-  - name: kxstudio
-    key: "F8599E482BD84BD9"
-  - name: falktx
-    key: "2D3445A829213837"
 
 audio_packages:
   - name: alsa-tools
@@ -17,20 +12,9 @@ audio_packages:
   - name: normalize-audio
   - name: pulseaudio-module-jack
   - name: python-xdg
-  - name: qtractor
   - name: sox
   - name: sweep
 
 audio_backports_packages:
   - name: linux-headers-rt-amd64
   - name: linux-image-rt-amd64
-
-audio_kxstudio_trusty_packages:
-  - name: ardour4
-  - name: carla
-  - name: claudia
-  - name: guitarix
-  - name: muse
-
-audio_kxstudio_lucid_packages:
-  - name: drumgizmo

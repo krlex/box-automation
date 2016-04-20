@@ -14,22 +14,6 @@
     default_release: jessie-backports
     state: latest
 
-- name: install audio kxstudio trusty packages
-  become: yes
-  with_items: "{{ audio_kxstudio_trusty_packages }}"
-  apt:
-    pkg: "{{ item.name }}"
-    default_release: trusty
-    state: latest
-
-- name: install audio kxstudio lucid packages
-  become: yes
-  with_items: "{{ audio_kxstudio_lucid_packages }}"
-  apt:
-    pkg: "{{ item.name }}"
-    default_release: lucid
-    state: latest
-
 - name: set pulseaudio config
   become: yes
   template:
