@@ -6,14 +6,6 @@
     pkg: "{{ item.name }}"
     state: latest
 
-- name: install audio backports packages
-  become: yes
-  with_items: "{{ audio_backports_packages }}"
-  apt:
-    pkg: "{{ item.name }}"
-    default_release: jessie-backports
-    state: latest
-
 - name: set pulseaudio config
   become: yes
   template:
