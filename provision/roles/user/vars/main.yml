@@ -3,6 +3,7 @@ user_directories:
   - path: Files
   - path: Mail
   - path: mobile
+  - path: Music
   - path: repos
   - path: secret
   - path: tilda
