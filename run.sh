@@ -5,6 +5,7 @@ PATH="${HOME}/.local/bin:${PATH}"
 virtual_env="provision"
 virtual_env_path=~/.virtualenvs/$virtual_env
 
+sudo apt-get install build-essential libssl-dev libffi-dev python-dev
 apt-get install -y sudo python-pip python-dev sshpass
 pip install --user vex
 vex --make $virtual_env pip install -U pip

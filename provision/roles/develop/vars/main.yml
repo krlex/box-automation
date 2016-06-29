@@ -17,7 +17,6 @@ develop_packages:
 
 develop_jessie_packages:
   - name: nodejs
-  - name: virtualbox-5.0
 
 develop_backports_packages:
   - name: docker.io
@@ -29,5 +28,3 @@ develop_testing_packages:
 develop_repositories:
   - name: nodejs
     key: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
-  - name: virtualbox
-    key: https://www.virtualbox.org/download/oracle_vbox.asc
