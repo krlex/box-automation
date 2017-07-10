@@ -15,7 +15,7 @@ develop_packages:
   - name: vim-gtk
   - name: zlib1g-dev
 
-develop_jessie_packages:
+develop_stretch_packages:
   - name: nodejs
 
 develop_backports_packages:

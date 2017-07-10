@@ -7,7 +7,7 @@ communication_packages:
   - name: notmuch-vim
   - name: offlineimap
 
-communication_jessie_packages:
+communication_stretch_packages:
   - name: weechat
   - name: weechat-scripts
 

@@ -6,12 +6,12 @@
     pkg: "{{ item.name }}"
     state: latest
 
-- name: install develop jessie packages
+- name: install develop stretch packages
   become: yes
-  with_items: "{{ develop_jessie_packages }}"
+  with_items: "{{ develop_stretch_packages }}"
   apt:
     pkg: "{{ item.name }}"
-    default_release: "jessie"
+    default_release: "stretch"
     state: latest
 
 - name: install develop backports packages
@@ -19,7 +19,7 @@
   with_items: "{{ develop_backports_packages }}"
   apt:
     pkg: "{{ item.name }}"
-    default_release: "jessie-backports"
+    default_release: "stretch-backports"
     state: latest
 
 - name: install develop testing packages

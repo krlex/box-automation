@@ -6,12 +6,12 @@
     pkg: "{{ item.name }}"
     state: latest
 
-- name: install communication jessie packages
+- name: install communication stretch packages
   become: yes
-  with_items: "{{ communication_jessie_packages }}"
+  with_items: "{{ communication_stretch_packages }}"
   apt:
     pkg: "{{ item.name }}"
-    default_release: jessie
+    default_release: stretch
     state: latest
 
 - name: install communication nightly packages

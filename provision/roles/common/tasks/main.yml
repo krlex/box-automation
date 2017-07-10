@@ -21,7 +21,7 @@
   with_items: "{{ common_backports_packages }}"
   apt:
     pkg: "{{ item.name }}"
-    default_release: "jessie-backports"
+    default_release: "stretch-backports"
     state: latest
 
 - name: set timezone
