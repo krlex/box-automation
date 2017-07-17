@@ -18,9 +18,6 @@ develop_packages:
 develop_stretch_packages:
   - name: nodejs
 
-develop_backports_packages:
-  - name: docker.io
-
 develop_testing_packages:
   - name: libncurses5-dev
   - name: vagrant

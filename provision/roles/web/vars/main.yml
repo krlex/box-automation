@@ -2,7 +2,7 @@
 web_packages:
   - name: chromium
   - name: elinks
-  - name: flashplugin-nonfree
+    #  - name: flashplugin-nonfree
   - name: iceweasel
   - name: pepperflashplugin-nonfree
   - name: rtorrent

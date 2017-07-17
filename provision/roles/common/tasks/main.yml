@@ -1,14 +1,4 @@
 ---
-- name: update apt
-  become: yes
-  apt:
-    update_cache: yes
-
-- name: upgrade packages
-  become: yes
-  apt:
-    upgrade: full
-
 - name: install common packages
   become: yes
   with_items: "{{ common_packages }}"

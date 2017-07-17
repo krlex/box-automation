@@ -14,14 +14,6 @@
     default_release: "stretch"
     state: latest
 
-- name: install develop backports packages
-  become: yes
-  with_items: "{{ develop_backports_packages }}"
-  apt:
-    pkg: "{{ item.name }}"
-    default_release: "stretch-backports"
-    state: latest
-
 - name: install develop testing packages
   become: yes
   with_items: "{{ develop_testing_packages }}"

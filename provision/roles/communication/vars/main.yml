@@ -1,18 +1,15 @@
 ---
 communication_packages:
-  - name: gstreamer0.10-tools
-  - name: gstreamer0.10-plugins-good
+  - name: gstreamer1.0-tools
+  - name: gstreamer1.0-plugins-good
   - name: libnotify-bin
-  - name: mutt-patched
+    #- name: mutt-patched
   - name: notmuch-vim
   - name: offlineimap
 
 communication_stretch_packages:
   - name: weechat
   - name: weechat-scripts
-
-communication_nightly_packages:
-  - name: qtox
 
 communication_url_packages:
   - url: "http://download.cdn.viber.com/cdn/desktop/Linux"

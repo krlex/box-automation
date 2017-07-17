@@ -14,14 +14,6 @@
     default_release: stretch
     state: latest
 
-- name: install communication nightly packages
-  become: yes
-  with_items: "{{ communication_nightly_packages }}"
-  apt:
-    pkg: "{{ item.name }}"
-    default_release: nightly
-    state: latest
-
 - name: install ca certs
   become: yes
   with_items: "{{ communication_certs }}"
