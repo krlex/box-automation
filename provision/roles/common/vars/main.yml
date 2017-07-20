@@ -6,6 +6,7 @@ common_packages:
   - name: gpm
   - name: hplip
   - name: htop
+  - name: browser-plugin-freshplayer-pepperflash
   - name: inotify-tools
   - name: iptables
 
