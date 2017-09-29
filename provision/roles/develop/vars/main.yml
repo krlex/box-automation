@@ -2,7 +2,6 @@
 develop_packages:
   - name: cmake
   - name: curl
-  - name: emacs
   - name: exuberant-ctags
   - name: git-core
   - name: libjpeg-dev
