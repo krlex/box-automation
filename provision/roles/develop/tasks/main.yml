@@ -19,5 +19,5 @@
   with_items: "{{ develop_testing_packages }}"
   apt:
     pkg: "{{ item.name }}"
-    default_release: "testing"
+    default_release: "stretch"
     state: latest

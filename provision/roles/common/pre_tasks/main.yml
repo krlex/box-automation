@@ -11,44 +11,17 @@
     path: /etc/apt/sources.list
     state: absent
 
-- name: configure security sources
-  become: yes
-  template:
-    src: roles/common/templates/security.list.j2
-    dest: /etc/apt/sources.list.d/security.list
-    owner: root
-    group: root
-
-- name: configure security preferences
-  become: yes
-  template:
-    src: roles/common/templates/security.pref.j2
-    dest: /etc/apt/preferences.d/security.pref
-    owner: root
-    group: root
-
 - name: configure debian sources
   become: yes
-  with_items: "{{ common_debian_repos }}"
   template:
     src: "roles/common/templates/debian.list.j2"
-    dest: "/etc/apt/sources.list.d/{{ item.repo }}.list"
+    dest: "/etc/apt/sources.list.d/debian.list"
     owner: root
     group: root
 
-- name: configure debian preferences
-  become: yes
-  with_items: "{{ common_debian_repos }}"
-  template:
-    src: "roles/common/templates/debian.pref.j2"
-    dest: "/etc/apt/preferences.d/{{ item.repo }}.pref"
-    owner: root
-    group: root
 
-- name: configure extra sources
-  become: yes
-  template:
-    src: roles/common/templates/extra.list.j2
-    dest: /etc/apt/sources.list.d/extra.list
-    owner: root
-    group: root
+- name: Update and upgrade apt packages
+  become: true
+  apt:
+    upgrade: yes
+    update_cache: yes

@@ -2,9 +2,8 @@
 web_packages:
   - name: chromium
   - name: elinks
-    #  - name: flashplugin-nonfree
-  - name: iceweasel
-  - name: pepperflashplugin-nonfree
+  - name: firefox-esr
+  - name: browser-plugin-freshplayer-pepperflash
   - name: rtorrent
   - name: xul-ext-adblock-plus
 

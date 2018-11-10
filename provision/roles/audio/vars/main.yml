@@ -11,7 +11,7 @@ audio_packages:
   - name: ncmpcpp
   - name: normalize-audio
   - name: pulseaudio-module-jack
-  - name: python-xdg
+  - name: python3-xdg
   - name: sox
   - name: sweep
 

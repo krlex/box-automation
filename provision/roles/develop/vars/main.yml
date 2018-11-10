@@ -1,14 +1,13 @@
 ---
 develop_packages:
   - name: cmake
-  - name: curl
   - name: exuberant-ctags
   - name: git-core
   - name: libjpeg-dev
   - name: libssl-dev
-  - name: python-dev
-  - name: python-pip
-  - name: python-virtualenv
+  - name: python3-dev
+  - name: python3-pip
+  - name: python3-virtualenv
   - name: ruby
   - name: tmux
   - name: vim-gtk

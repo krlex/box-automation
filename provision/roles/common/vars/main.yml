@@ -12,9 +12,3 @@ common_packages:
 
 common_backports_packages:
   - name: fish
-
-common_debian_repos:
-  - repo: stable
-    priority: 900
-  - repo: testing
-    priority: 750
