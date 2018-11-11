@@ -10,5 +10,5 @@ network_packages:
   - name: tor
   - name: wget
 
-network_syncthing_packages:
-  - name: syncthing
+    # network_syncthing_packages:
+      #- name: syncthing

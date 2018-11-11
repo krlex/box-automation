@@ -3,9 +3,8 @@
   hosts: all
   pre_tasks:
     - include: roles/common/pre_tasks/main.yml
-    - include: roles/communication/pre_tasks/main.yml
-    - include: roles/audio/pre_tasks/main.yml
     - include: roles/develop/pre_tasks/main.yml
+    - include: roles/user/pre_tasks/main.yml
     - include: roles/network/pre_tasks/main.yml
   roles:
     - common

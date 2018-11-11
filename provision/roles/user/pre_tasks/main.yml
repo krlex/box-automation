@@ -1,0 +1,8 @@
+---
+- name: create user dirs
+  become_user: "{{ user }}"
+  with_items: "{{ user_directories }}"
+  file:
+    path: "~{{ user }}/{{ item.path }}"
+    state: directory
+

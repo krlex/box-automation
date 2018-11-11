@@ -9,7 +9,7 @@ user_directories:
   - path: tilda
 
 user_repositories:
-  - repo: "https://github.com/mekanix/dotfiles"
+  - repo: "https://github.com/krlex/dotfiles"
     dest: "dotfiles"
 
 user_config:
