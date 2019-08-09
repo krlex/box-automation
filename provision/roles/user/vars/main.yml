@@ -1,12 +1,8 @@
 ---
 user_directories:
   - path: Files
-  - path: Mail
-  - path: mobile
   - path: Music
   - path: repos
-  - path: secret
-  - path: tilda
 
 user_repositories:
   - repo: "https://github.com/krlex/dotfiles"

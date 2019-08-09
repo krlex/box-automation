@@ -1,5 +1,5 @@
-#---
-#- name: alter .gitmodules back
-#  become: yes
-#  become_user: "{{ user }}"
-#  command: "~{{ user }}/repos/dotfiles/bin/switch_submodules_ssh.sh"
+---
+- name: alter .gitmodules back
+  become: yes
+  become_user: "{{ user }}"
+  command: "~{{ user }}/repos/dotfiles/bin/switch_submodules_ssh.sh"

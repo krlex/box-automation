@@ -13,13 +13,13 @@ develop_packages:
   - name: vim-gtk
   - name: zlib1g-dev
 
-develop_stretch_packages:
-  - name: nodejs
+    # develop_stretch_packages:
+    #  - name: nodejs
 
 develop_testing_packages:
   - name: libncurses5-dev
   - name: vagrant
 
-develop_repositories:
-  - name: nodejs
-    key: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+    # develop_repositories:
+    #  - name: nodejs
+    #    key: https://deb.nodesource.com/gpgkey/nodesource.gpg.key

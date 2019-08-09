@@ -6,18 +6,18 @@
     pkg: "{{ item.name }}"
     state: latest
 
-- name: install develop stretch packages
-  become: yes
-  with_items: "{{ develop_stretch_packages }}"
-  apt:
-    pkg: "{{ item.name }}"
-    default_release: "stretch"
-    state: latest
-
-- name: install develop testing packages
-  become: yes
-  with_items: "{{ develop_testing_packages }}"
-  apt:
-    pkg: "{{ item.name }}"
-    default_release: "stretch"
-    state: latest
+    #- name: install develop stretch packages
+    #  become: yes
+    #  with_items: "{{ develop_stretch_packages }}"
+    #  apt:
+    #    pkg: "{{ item.name }}"
+    #    default_release: "stretch"
+    #    state: latest
+    #
+    #- name: install develop testing packages
+    #  become: yes
+    #  with_items: "{{ develop_testing_packages }}"
+    #  apt:
+    #    pkg: "{{ item.name }}"
+    #    default_release: "stretch"
+    #    state: latest

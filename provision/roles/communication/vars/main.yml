@@ -11,9 +11,9 @@ communication_stretch_packages:
   - name: weechat
   - name: weechat-scripts
 
-communication_url_packages:
-  - url: "http://download.cdn.viber.com/cdn/desktop/Linux"
-    filename: viber.deb
+    # communication_url_packages:
+    #  - url: "http://download.cdn.viber.com/cdn/desktop/Linux"
+    #    filename: viber.deb
 
 communication_certs:
   - url: "https://www.thawte.com/roots"

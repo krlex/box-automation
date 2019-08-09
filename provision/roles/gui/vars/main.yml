@@ -6,11 +6,11 @@ gui_packages:
   - name: liferea
   - name: rxvt-unicode-256color
   - name: slim
-  - name: synergy
   - name: unclutter
   - name: xautolock
   - name: xinit
   - name: xserver-xorg
-
-gui_testing_packages:
   - name: rofi
+
+    # gui_testing_packages:
+    #  - name: rofi

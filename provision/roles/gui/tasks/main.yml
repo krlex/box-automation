@@ -20,10 +20,10 @@
     owner: root
     group: root
 
-- name: install gui testing packages
-  become: yes
-  with_items: "{{ gui_testing_packages }}"
-  apt:
-    pkg: "{{ item.name }}"
-    default_release: "stretch"
-    state: latest
+    #- name: install gui testing packages
+    #  become: yes
+    #  with_items: "{{ gui_testing_packages }}"
+    #  apt:
+    #    pkg: "{{ item.name }}"
+    #    default_release: "stretch"
+    #    state: latest

@@ -9,6 +9,7 @@ common_packages:
   - name: browser-plugin-freshplayer-pepperflash
   - name: inotify-tools
   - name: iptables
+  - name: virtualenv
 
-common_backports_packages:
-  - name: fish
+# common_backports_packages:
+  # - name: fish

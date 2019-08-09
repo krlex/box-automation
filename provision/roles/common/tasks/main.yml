@@ -6,13 +6,13 @@
     pkg: "{{ item.name }}"
     state: latest
 
-- name: install common backports packages
-  become: yes
-  with_items: "{{ common_backports_packages }}"
-  apt:
-    pkg: "{{ item.name }}"
-    default_release: "stretch-backports"
-    state: latest
+    #- name: install common backports packages
+    #  become: yes
+    #  with_items: "{{ common_backports_packages }}"
+    #  apt:
+    #    pkg: "{{ item.name }}"
+    #    default_release: "stretch-backports"
+    #    state: latest
 
 - name: set timezone
   become: yes

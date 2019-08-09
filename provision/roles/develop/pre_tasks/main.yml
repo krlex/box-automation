@@ -1,16 +1,16 @@
 ---
-- name: configure develop sources
-  become: yes
-  with_items: "{{ develop_repositories }}"
-  template:
-    src: "roles/develop/templates/{{ item.name }}.list.j2"
-    dest: "/etc/apt/sources.list.d/{{ item.name }}.list"
-    owner: root
-    group: root
-
-- name: ensure develop gpg keys are in place
-  become: yes
-  with_items: "{{ develop_repositories }}"
-  apt_key:
-    url: "{{ item.key }}"
-    validate_certs: no
+#- name: configure develop sources
+#  become: yes
+#  with_items: "{{ develop_repositories }}"
+#  template:
+#    src: "roles/develop/templates/{{ item.name }}.list.j2"
+#    dest: "/etc/apt/sources.list.d/{{ item.name }}.list"
+#    owner: root
+#    group: root
+#
+#- name: ensure develop gpg keys are in place
+#  become: yes
+#  with_items: "{{ develop_repositories }}"
+#  apt_key:
+#    url: "{{ item.key }}"
+#    validate_certs: no
