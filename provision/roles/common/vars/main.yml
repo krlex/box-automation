@@ -10,6 +10,7 @@ common_packages:
   - name: inotify-tools
   - name: iptables
   - name: virtualenv
+  - name: npm
 
 # common_backports_packages:
   # - name: fish
