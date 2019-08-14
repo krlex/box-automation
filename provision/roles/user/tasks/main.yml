@@ -33,7 +33,7 @@
     #  args:
     #    chdir: "~{{ user }}/repos/dotfiles"
     #    creates: "~{{ user }}/repos/dotfiles/vim/bin/init.sh"
-    #
+
     #- name: init configuration of programs
     #  become: yes
     #  become_user: "{{ user }}"
@@ -47,7 +47,7 @@
     #  template:
     #    src: gitconfig.j2
     #    dest: "~{{ user }}/.gitconfig"
-    #
+
     #- name: install pyenv
     #  become: yes
     #  become_user: "{{ user }}"

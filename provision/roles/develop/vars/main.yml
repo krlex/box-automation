@@ -14,7 +14,7 @@ develop_packages:
 
 develop_buster_packages:
   - name: nodejs
-  - name: npm
+    # - name: npm
 
 develop_testing_packages:
   - name: libncurses5-dev
