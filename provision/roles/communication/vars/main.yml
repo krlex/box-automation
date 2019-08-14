@@ -3,17 +3,8 @@ communication_packages:
   - name: gstreamer1.0-tools
   - name: gstreamer1.0-plugins-good
   - name: libnotify-bin
-    #- name: mutt-patched
   - name: notmuch-vim
   - name: offlineimap
-
-communication_stretch_packages:
-  - name: weechat
-  - name: weechat-scripts
-
-    # communication_url_packages:
-    #  - url: "http://download.cdn.viber.com/cdn/desktop/Linux"
-    #    filename: viber.deb
 
 communication_certs:
   - url: "https://www.thawte.com/roots"

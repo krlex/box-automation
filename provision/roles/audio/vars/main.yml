@@ -1,6 +1,7 @@
 ---
 
 audio_packages:
+  - name: audacious
   - name: alsa-tools
   - name: alsa-tools-gui
   - name: alsa-utils
