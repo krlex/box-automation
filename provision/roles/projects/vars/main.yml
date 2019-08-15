@@ -1,0 +1,35 @@
+---
+
+vagrant_repositories:
+  - repo: "https://github.com/krlex/python-port_scanner"
+    dest: "python-port_scanner"
+
+  - repo: "https://github.com/krlex/frontend-practice"
+    dest: "frontend-practice"
+
+  - repo: "https://github.com/krlex/jobproject"
+    dest: "jobproject"
+
+  - repo: "https://github.com/krlex/ansible-for-devops"
+    dest: "ansible-for-devops"
+
+  - repo: "https://github.com/krlex/wordpress-box"
+    dest: "wordpress-box"
+
+  - repo: "https://github.com/krlex/ispmail"
+    dest: "ispmail"
+
+  - repo: "https://github.com/krlex/Portus"
+    dest: "Portus"
+
+  - repo: "https://github.com/krlex/phansible"
+    dest: "phansible"
+
+  - repo: "https://github.com/krlex/ansible-examples"
+    dest: "ansible-examples"
+
+  - repo: "https://github.com/krlex/spacevim"
+    dest: "spacevim"
+
+  - repo: "https://github.com/krlex/easyengine"
+    dest: "easyengine"

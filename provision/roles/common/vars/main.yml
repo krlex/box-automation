@@ -1,16 +1,15 @@
 ---
 common_packages:
-  - name: curl
   - name: apt-file
+  - name: curl
+  - name: fish
   - name: gist
   - name: gpm
   - name: hplip
   - name: htop
   - name: browser-plugin-freshplayer-pepperflash
+    #- name: npm
   - name: inotify-tools
   - name: iptables
   - name: virtualenv
-  - name: npm
 
-# common_backports_packages:
-  # - name: fish

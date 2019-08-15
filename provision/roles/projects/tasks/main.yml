@@ -1,0 +1,14 @@
+---
+
+- name: Install git package
+  become: yes
+  apt:
+    pkg: "git"
+    state: latest
+
+- name: Vagrant Projects repositories
+  with_items: "{{ vagrant_repositories }}"
+  git:
+    repo: "{{ item.repo }}"
+    dest: "~{{ user }}/repos/{{ item.dest }}"
+    update: no
