@@ -11,4 +11,4 @@
   with_items: "{{ web_chromium_configs }}"
   template:
     src: "{{ item.name }}.j2"
-    dest: "/etc/chromium.d/{{ item.name }}"
+    dest: "/etc/chromium-browser/{{ item.name }}"
