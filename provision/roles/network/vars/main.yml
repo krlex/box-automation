@@ -1,6 +1,5 @@
 ---
 network_packages:
-  - name: firmware-iwlwifi
   - name: minicom
   - name: network-manager-gnome
   - name: nmap
