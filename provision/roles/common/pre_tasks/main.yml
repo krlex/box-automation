@@ -11,11 +11,11 @@
     path: /etc/apt/sources.list
     state: absent
 
-- name: configure debian sources
+- name: configure Ubuntu Bionic sources
   become: yes
   template:
-    src: "roles/common/templates/debian.list.j2"
-    dest: "/etc/apt/sources.list.d/debian.list"
+    src: "roles/common/templates/ubuntu.list.j2"
+    dest: "/etc/apt/sources.list.d/ubuntu.list"
     owner: root
     group: root
 
