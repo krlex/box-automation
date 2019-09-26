@@ -13,12 +13,3 @@
     pkg: "{{ item.name }}"
     default_release: "buster"
     state: latest
-
-    #
-    #- name: install develop testing packages
-    #  become: yes
-    #  with_items: "{{ develop_testing_packages }}"
-    #  apt:
-    #    pkg: "{{ item.name }}"
-    #    default_release: "buster"
-    #    state: latest
