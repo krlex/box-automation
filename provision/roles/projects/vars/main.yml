@@ -22,9 +22,6 @@ vagrant_repositories:
   - repo: "https://github.com/krlex/Portus"
     dest: "Portus"
 
-  - repo: "https://github.com/krlex/phansible"
-    dest: "phansible"
-
   - repo: "https://github.com/krlex/ansible-examples"
     dest: "ansible-examples"
 
