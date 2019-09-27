@@ -3,6 +3,7 @@
   hosts: all
   pre_tasks:
     - include: roles/common/pre_tasks/main.yml
+    - include: roles/virtualbox/pre_tasks/main.yml
     - include: roles/develop/pre_tasks/main.yml
     - include: roles/user/pre_tasks/main.yml
     - include: roles/network/pre_tasks/main.yml
@@ -17,5 +18,6 @@
     - photo
     - user
     - utils
+    - virtualbox
     - video
     - web

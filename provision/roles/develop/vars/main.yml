@@ -10,7 +10,6 @@ develop_packages:
   - name: tmux
   - name: vim
   - name: zlib1g-dev
-  - name: virtualbox
 
 develop_buster_packages:
   - name: nodejs

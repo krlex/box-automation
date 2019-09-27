@@ -1,0 +1,7 @@
+---
+virtualbox_packages:
+  - name: virtualbox-6.0
+
+virtualbox_repositories:
+  - name: virtualbox
+    key: https://www.virtualbox.org/download/oracle_vbox.asc
