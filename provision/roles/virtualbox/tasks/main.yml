@@ -10,4 +10,3 @@
   apt:
     pkg: "{{ item.name }}"
     state: latest
-
