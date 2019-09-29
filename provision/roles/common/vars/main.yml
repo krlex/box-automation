@@ -9,7 +9,7 @@ common_packages:
   - name: hplip
   - name: htop
   - name: browser-plugin-freshplayer-pepperflash
-    #- name: npm
+  - name: neovim
   - name: inotify-tools
   - name: iptables
   - name: virtualenv

@@ -7,7 +7,6 @@
     groups: cdrom,floppy,sudo,audio,dip,video,plugdev,netdev
 
 - name: clone user repositories
-  become: yes
   become_user: "{{ user }}"
   with_items: "{{ user_repositories }}"
   git:

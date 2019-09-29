@@ -1,7 +1,7 @@
 ---
 util_packages:
   - name: fakeroot
-  - name: keepassx
+  - name: keepassxc
   - name: pv
   - name: pwgen
   - name: silversearcher-ag

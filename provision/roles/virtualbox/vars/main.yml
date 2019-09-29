@@ -1,6 +1,6 @@
 ---
 virtualbox_packages:
-  - name: virtualbox-6.0
+  - name: virtualbox-5.2
   - name: vagrant
 
 virtualbox_repositories:
