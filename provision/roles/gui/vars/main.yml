@@ -11,6 +11,7 @@ gui_packages:
   - name: xinit
   - name: xserver-xorg
   - name: rofi
+  - name: libreoffice
 
     # gui_testing_packages:
     #  - name: rofi
