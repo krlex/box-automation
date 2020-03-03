@@ -13,3 +13,4 @@ common_packages:
   - name: inotify-tools
   - name: iptables
   - name: virtualenv
+  - name: software-properties-common
