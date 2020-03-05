@@ -1,16 +1,17 @@
 ---
 common_packages:
   - name: apt-file
-  - name: vim-nox
+  - name: browser-plugin-freshplayer-pepperflash
   - name: curl
   - name: fish
   - name: gist
   - name: gpm
   - name: hplip
   - name: htop
-  - name: browser-plugin-freshplayer-pepperflash
   - name: neovim
+  - name: ntfs-3g
   - name: inotify-tools
   - name: iptables
-  - name: virtualenv
   - name: software-properties-common
+  - name: virtualenv
+  - name: vim-nox
