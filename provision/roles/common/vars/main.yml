@@ -1,5 +1,22 @@
 ---
-common_packages:
+debian_common_packages:
+  - name: apt-file
+  - name: browser-plugin-freshplayer-pepperflash
+  - name: curl
+  - name: fish
+  - name: gist
+  - name: gpm
+  - name: hplip
+  - name: htop
+  - name: neovim
+  - name: ntfs-3g
+  - name: inotify-tools
+  - name: iptables
+  - name: software-properties-common
+  - name: virtualenv
+  - name: vim-nox
+
+ubuntu_common_packages:
   - name: apt-file
   - name: browser-plugin-freshplayer-pepperflash
   - name: curl

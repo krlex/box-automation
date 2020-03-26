@@ -1,5 +1,5 @@
 ---
-web_packages:
+debian_web_packages:
   - name: chromium
   - name: elinks
   - name: firefox-esr
@@ -7,6 +7,18 @@ web_packages:
   - name: rtorrent
     #  - name: xul-ext-adblock-plus
 
-web_chromium_configs:
+debian_web_chromium_configs:
+  - name: incognito
+  - name: tor
+
+ubuntu_web_packages:
+  - name: chromium
+  - name: elinks
+  - name: firefox-esr
+  - name: browser-plugin-freshplayer-pepperflash
+  - name: rtorrent
+    #  - name: xul-ext-adblock-plus
+
+ubuntu_web_chromium_configs:
   - name: incognito
   - name: tor

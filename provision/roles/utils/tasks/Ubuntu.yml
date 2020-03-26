@@ -1,0 +1,7 @@
+---
+- name: install util packages
+  become: yes
+  with_items: "{{ ubuntu_util_packages }}"
+  apt:
+    pkg: "{{ item.name }}"
+    state: latest

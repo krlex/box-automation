@@ -1,8 +1,2 @@
----
-- name: create user dirs
-  become_user: "{{ user }}"
-  with_items: "{{ user_directories }}"
-  file:
-    path: "~{{ user }}/{{ item.path }}"
-    state: directory
-
+- name: include os specific tasks
+  include_tasks: "{{ ansible_distribution }}.yml"

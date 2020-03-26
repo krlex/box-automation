@@ -1,5 +1,5 @@
 ---
-develop_packages:
+debian_develop_packages:
   - name: cmake
   - name: exuberant-ctags
   - name: libjpeg-dev
@@ -11,9 +11,28 @@ develop_packages:
   - name: vim
   - name: zlib1g-dev
 
-develop_buster_packages:
+debian_develop_buster_packages:
   - name: nodejs
 
-develop_repositories:
+debian_develop_repositories:
+  - name: nodejs
+    key: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+
+ubuntu_develop_packages:
+  - name: cmake
+  - name: exuberant-ctags
+  - name: libjpeg-dev
+  - name: libssl-dev
+  - name: python3-dev
+  - name: python3-pip
+  - name: ruby
+  - name: tmux
+  - name: vim
+  - name: zlib1g-dev
+
+ubuntu_develop_buster_packages:
+  - name: nodejs
+
+ubuntu_develop_repositories:
   - name: nodejs
     key: https://deb.nodesource.com/gpgkey/nodesource.gpg.key

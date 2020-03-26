@@ -1,8 +1,16 @@
 ---
-virtualbox_packages:
-  - name: virtualbox-5.2
+debian_virtualbox_packages:
+  - name: virtualbox-6.1
   - name: vagrant
 
-virtualbox_repositories:
+debian_virtualbox_repositories:
+  - name: virtualbox
+    key: https://www.virtualbox.org/download/oracle_vbox.asc
+
+ubuntu_virtualbox_packages:
+  - name: virtualbox-6.1
+  - name: vagrant
+
+ubuntu_virtualbox_repositories:
   - name: virtualbox
     key: https://www.virtualbox.org/download/oracle_vbox.asc

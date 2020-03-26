@@ -1,14 +1,29 @@
 ---
-user_directories:
+debian_user_directories:
   - path: Files
   - path: Music
   - path: repos
 
-user_repositories:
+debian_user_repositories:
   - repo: "https://github.com/krlex/dotfiles"
     dest: "dotfiles"
 
-user_config:
+debian_user_config:
+  - name: ".gnupg"
+  - name: ".netrc"
+  - name: ".ssh"
+  - name: "MusE"
+
+ubuntu_user_directories:
+  - path: Files
+  - path: Music
+  - path: repos
+
+ubuntu_user_repositories:
+  - repo: "https://github.com/krlex/dotfiles"
+    dest: "dotfiles"
+
+ubuntu_user_config:
   - name: ".gnupg"
   - name: ".netrc"
   - name: ".ssh"

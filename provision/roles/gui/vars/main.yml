@@ -1,5 +1,22 @@
 ---
-gui_packages:
+debian_gui_packages:
+  - name: arandr
+  - name: evince
+  - name: i3
+  - name: liferea
+  - name: rxvt-unicode-256color
+  - name: slim
+  - name: unclutter
+  - name: xautolock
+  - name: xinit
+  - name: xserver-xorg
+  - name: rofi
+  - name: libreoffice
+
+    # gui_testing_packages:
+    #  - name: rofi
+
+ubuntu_gui_packages:
   - name: arandr
   - name: evince
   - name: i3

@@ -1,0 +1,19 @@
+---
+- name: install communication packages
+  become: yes
+  with_items: "{{ ubuntu_communication_packages }}"
+  apt:
+    pkg: "{{ item.name }}"
+    state: latest
+
+- name: install ca certs
+  become: yes
+  with_items: "{{ ubuntu_communication_certs }}"
+  get_url:
+    url: "{{ item.url }}/{{ item.filename }}"
+    dest: "/usr/local/share/ca-certificates/{{ item.filename }}"
+    mode: 0644
+
+- name: update certificates
+  become: yes
+  shell: update-ca-certificates

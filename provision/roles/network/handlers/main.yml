@@ -1,6 +1,2 @@
----
-- name: restart network manager
-  become: yes
-  service:
-    name: network-manager
-    state: restarted
+- name: include os specific tasks
+  include_tasks: "{{ ansible_distribution }}.yml"

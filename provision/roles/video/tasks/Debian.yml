@@ -1,0 +1,7 @@
+---
+- name: install video packages
+  become: yes
+  with_items: "{{ debian_video_packages }}"
+  apt:
+    pkg: "{{ item.name }}"
+    state: latest

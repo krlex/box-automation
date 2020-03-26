@@ -1,0 +1,23 @@
+---
+- name: install network packages
+  become: yes
+  with_items: "{{ debian_network_packages }}"
+  apt:
+    pkg: "{{ item.name }}"
+    state: latest
+
+    #- name: install network syncthing packages
+    #  become: yes
+    #  with_items: "{{ network_syncthing_packages }}"
+    #  apt:
+    #    pkg: "{{ item.name }}"
+    #    default_release: syncthing
+    #    state: latest
+
+- name: configure network interfaces
+  become: yes
+  template:
+    src: interfaces.j2
+    dest: /etc/network/interfaces
+  notify:
+    - restart network-manager

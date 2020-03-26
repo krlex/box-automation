@@ -1,5 +1,5 @@
 ---
-util_packages:
+debian_util_packages:
   - name: fakeroot
   - name: keepassxc
   - name: pv

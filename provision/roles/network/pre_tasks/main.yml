@@ -1,20 +1,2 @@
----
-#- name: configure network sources
-#  become: yes
-#  template:
-#    src: roles/network/templates/syncthing.list.j2
-#    dest: /etc/apt/sources.list.d/syncthing.list
-#    owner: root
-#    group: root
-#
-#- name: update for syncthing
-#  become: yes
-#  apt:
-#    apt_cache: yes
-#    state: latest
-#
-#- name: ensure network gpg keys are in place
-#  become: yes
-#  apt_key:
-#    url: https://syncthing.net/release-key.txt
-#    validate_certs: no
+- name: include os specific tasks
+  include_tasks: "{{ ansible_distribution }}.yml"
