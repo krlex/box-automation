@@ -1,0 +1,27 @@
+---
+- name: install network packages
+  become: yes
+  with_items: "{{ ubuntu_network_packages }}"
+  apt:
+    pkg: "{{ item.name }}"
+    state: latest
+
+    #- name: install network syncthing packages
+    #  become: yes
+    #  with_items: "{{ network_syncthing_packages }}"
+    #  apt:
+    #    pkg: "{{ item.name }}"
+    #    default_release: syncthing
+    #    state: latest
+
+- name: configure network interfaces
+  become: yes
+  template:
+    src: interfaces.j2
+    dest: /etc/network/interfaces
+
+- name: network-manager restart
+  become: yes
+  service:
+    name: network-manager
+    state: restarted

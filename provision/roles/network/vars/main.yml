@@ -1,5 +1,5 @@
 ---
-network_packages:
+debian_network_packages:
   - name: firmware-iwlwifi
   - name: minicom
   - name: network-manager-gnome
@@ -12,3 +12,22 @@ network_packages:
 
     # network_syncthing_packages:
       #- name: syncthing
+
+ubuntu_network_packages:
+  - name: minicom
+  - name: network-manager-gnome
+  - name: nmap
+  - name: openntpd
+  - name: sshpass
+  - name: tcpdump
+  - name: tor
+  - name: wget
+
+    # network_syncthing_packages:
+      #- name: syncthing
+
+freebsd_network_packages:
+  - name: nmap
+  - name: sshpass
+  - name: syncthing
+  - name: wpa_supplicant_gui

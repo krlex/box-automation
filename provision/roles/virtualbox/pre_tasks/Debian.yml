@@ -1,0 +1,14 @@
+---
+- name: configure virtualbox sources
+  become: yes
+  with_items: "{{ debian_virtualbox_repositories }}"
+  template:
+    src: "roles/virtualbox/templates/{{ item.name }}.list.j2"
+    dest: "/etc/apt/sources.list.d/{{ item.name }}.list"
+    owner: root
+    group: root
+
+- name: ensure virtualbox gpg keys are in place
+  become: yes
+  command: sudo su -c 'wget -q -O- http://download.virtualbox.org/virtualbox/debian/oracle_vbox_2016.asc | apt-key add -'
+

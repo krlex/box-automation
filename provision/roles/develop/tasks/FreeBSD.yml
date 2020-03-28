@@ -1,0 +1,6 @@
+---
+- name: install develop packages
+  become: yes
+  with_items: "{{ freebsd_develop_packages }}"
+  package:
+    name: "{{ item.name }}"

@@ -1,0 +1,40 @@
+---
+- name: install audio packages
+  become: yes
+  with_items: "{{ ubuntu_audio_packages }}"
+  apt:
+    pkg: "{{ item.name }}"
+    state: latest
+
+- name: set pulseaudio config
+  become: yes
+  template:
+    src: default.pa.j2
+    dest: /etc/pulse/default.pa
+
+- name: set realtime priority
+  become: yes
+  template:
+    src: audio-limits.conf.j2
+    dest: /etc/security/limits.d/audio.conf
+
+- name: setup udev rtc
+  become: yes
+  template:
+    src: 99-rtc.rules.j2
+    dest: /etc/udev/rules.d/99-rtc.rules
+
+- name: create rc.local
+  become: yes
+  file:
+    path: /etc/rc.local
+    state: touch
+    mode: "u=rw,g=r,o=r"
+
+- name: setup rtc frequency
+  become: yes
+  lineinfile:
+    dest: /etc/rc.local
+    insertbefore: "^exit 0"
+    regexp: "^echo 3072"
+    line: "echo 3072 >/sys/class/rtc/rtc0/max_user_freq"

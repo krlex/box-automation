@@ -1,15 +1,3 @@
----
-- name: install develop packages
-  become: yes
-  with_items: "{{ develop_packages }}"
-  apt:
-    pkg: "{{ item.name }}"
-    state: latest
+- name: include os specific tasks
+  include_tasks: "{{ ansible_distribution }}.yml"
 
-- name: install develop buster packages
-  become: yes
-  with_items: "{{ develop_buster_packages }}"
-  apt:
-    pkg: "{{ item.name }}"
-    default_release: "buster"
-    state: latest

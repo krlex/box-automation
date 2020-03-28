@@ -1,0 +1,15 @@
+---
+- name: install develop packages
+  become: yes
+  with_items: "{{ ubuntu_develop_packages }}"
+  apt:
+    pkg: "{{ item.name }}"
+    state: latest
+
+- name: install develop buster packages
+  become: yes
+  with_items: "{{ ubuntu_develop_bionic_packages }}"
+  apt:
+    pkg: "{{ item.name }}"
+    default_release: "buster"
+    state: latest

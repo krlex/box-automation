@@ -1,6 +1,6 @@
 ---
 
-audio_packages:
+debian_audio_packages:
   - name: audacious
   - name: alsa-tools
   - name: alsa-tools-gui
@@ -16,6 +16,27 @@ audio_packages:
   - name: sox
   - name: sweep
 
-audio_backports_packages:
-  - name: linux-headers-rt-amd64
-  - name: linux-image-rt-amd64
+ubuntu_audio_packages:
+  - name: audacious
+  - name: alsa-tools
+  - name: alsa-tools-gui
+  - name: alsa-utils
+  - name: dbus-x11
+  - name: jack-tools
+  - name: ladish
+  - name: laditools
+  - name: ncmpcpp
+  - name: normalize-audio
+  - name: pulseaudio-module-jack
+  - name: python3-xdg
+  - name: sox
+  - name: sweep
+
+freebsd_audio_packages:
+  - name: audacious
+  - name: ardour5
+  - name: invada-studio-plugins-lv2
+  - name: normalize
+  - name: virtual_oss_ctl
+  - name: swhplugins
+  - name: swh-lv2

@@ -1,5 +1,5 @@
 ---
-common_packages:
+debian_common_packages:
   - name: apt-file
   - name: browser-plugin-freshplayer-pepperflash
   - name: curl
@@ -15,3 +15,44 @@ common_packages:
   - name: software-properties-common
   - name: virtualenv
   - name: vim-nox
+
+ubuntu_common_packages:
+  - name: apt-file
+  - name: browser-plugin-freshplayer-pepperflash
+  - name: curl
+  - name: fish
+  - name: gist
+  - name: gpm
+  - name: hplip
+  - name: htop
+  - name: neovim
+  - name: ntfs-3g
+  - name: inotify-tools
+  - name: iptables
+  - name: software-properties-common
+  - name: virtualenv
+  - name: vim-nox
+
+freebsd_common_packages:
+  - name: automount
+  - name: bash
+  - name: beadm
+  - name: curl
+  - name: fish
+  - name: grub2-bhyve
+
+freebsd_common_rc:
+  - name: dbus
+  - name: lockd
+  - name: mountd
+  - name: moused
+  - name: nfsd
+  - name: ntpd
+  - name: routing
+  - name: rpcbind
+  - name: slim
+  - name: statd
+  - name: syscons
+  - name: virtual_oss
+  - name: webcamd
+

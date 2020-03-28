@@ -1,0 +1,17 @@
+---
+- name: ensure user exists
+  become: yes
+  user:
+    name: "{{ user }}"
+    shell: /usr/local/bin/fish
+    groups: wheel,operator
+
+- name: create user dirs
+  become: yes
+  with_items: "{{ freebsd_user_directories }}"
+  file:
+    path: "~{{ user }}/{{ item.path }}"
+    state: directory
+    owner: "{{ user }}"
+    group: "{{ user }}"
+    mode: 0777

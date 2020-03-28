@@ -1,0 +1,14 @@
+---
+- name: install video packages
+  become: yes
+  with_items: "{{ ubuntu_video_packages }}"
+  apt:
+    pkg: "{{ item.name }}"
+    state: latest
+
+- name: install video packages
+  become: yes
+  with_items: "{{ ubuntu_video_packages }}"
+  apt:
+    pkg: "{{ item.name }}"
+    state: latest

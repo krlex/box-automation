@@ -1,0 +1,12 @@
+---
+- name: Update apt packages
+  become: yes
+  apt:
+    update_cache: yes
+
+- name: install virtualbox packages
+  become: yes
+  with_items: "{{ ubuntu_virtualbox_packages }}"
+  apt:
+    pkg: "{{ item.name }}"
+    state: latest

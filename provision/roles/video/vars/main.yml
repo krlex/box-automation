@@ -1,3 +1,10 @@
 ---
-video_packages:
+debian_video_packages:
+  - name: mpv
+
+ubuntu_video_packages:
+  - name: mpv
+
+freebsd_video_packages:
+  - name: vlc
   - name: mpv

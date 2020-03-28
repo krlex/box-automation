@@ -1,18 +1,20 @@
 # Path, X server and arguments (if needed)
 # Note: -xauth $authfile is automatically appended
-#
-default_path        /usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
-default_xserver     /usr/bin/X11/X
-xserver_arguments   -nolisten tcp vt9
+# Use default path from /etc/login.conf
+default_path        /sbin:/bin:/usr/sbin:/usr/bin:/usr/games:/usr/local/sbin:/usr/local/bin
+default_xserver     /usr/local/bin/X
+# The X server needs to be started on an unused virtual terminal,
+# for FreeBSD in a default configuration, the first one of those is #09
+xserver_arguments   -nolisten tcp vt09
 
 # Commands for halt, login, etc.
-halt_cmd            /sbin/shutdown -h now
+halt_cmd            /sbin/shutdown -p now
 reboot_cmd          /sbin/shutdown -r now
-console_cmd         /usr/bin/xterm -C -fg white -bg black +sb -T "Console login" -e /bin/sh -c "/bin/cat /etc/issue.net; exec /bin/login"
-#suspend_cmd        /usr/sbin/suspend
+console_cmd         /usr/local/bin/xterm -C -fg white -bg black +sb -T "Console login" -e /bin/sh -c "/bin/cat /etc/motd; exec /usr/bin/login"
+suspend_cmd        /usr/sbin/acpiconf -s 3
 
 # Full path to the xauth binary
-xauth_path         /usr/bin/X11/xauth
+xauth_path         /usr/local/bin/xauth
 
 # Xauth file for server
 authfile           /var/run/slim.auth
@@ -34,7 +36,7 @@ authfile           /var/run/slim.auth
 # to adjust the command according to your preferred shell,
 # i.e. for freebsd use:
 login_cmd           exec /bin/sh - ~/.xinitrc %session
-# login_cmd           exec /bin/bash -login /etc/X11/Xsession %session
+#login_cmd           exec /usr/local/bin/bash -login ~/.xinitrc %session
 
 # Commands executed when starting and exiting a session.
 # They can be used for registering a X11 session with
@@ -48,12 +50,19 @@ login_cmd           exec /bin/sh - ~/.xinitrc %session
 # options "-d" and "-nodaemon"
 # daemon	yes
 
-# Set directory that contains the xsessions.
-# slim reads xsesion from this directory, and be able to select.
-sessiondir            /usr/share/xsessions/
+# Option "sessions" is no longer supported.
+# Now you need to put session files in the directory specified
+# by option "sessiondir".
+# sessions            xfce4,icewm-session,wmaker,blackbox
 
-# Executed when pressing F11 (requires scrot)
-screenshot_cmd      scrot /root/slim.png
+# Directory of session files.
+# They should be xdg-style .desktop files.
+# The "Name" entry in the session file would be used as session name.
+# The "Exec" entry would replace %session in login_cmd.
+sessiondir		/usr/local/share/xsessions
+
+# Executed when pressing F11 (requires imagemagick)
+screenshot_cmd      import -window root /slim.png
 
 # welcome message. Available variables: %host, %domain
 welcome_msg         Welcome to %host
@@ -62,12 +71,12 @@ welcome_msg         Welcome to %host
 # session_msg         Session:
 
 # shutdown / reboot messages
-shutdown_msg       The system is halting...
+shutdown_msg       The system is powering down...
 reboot_msg         The system is rebooting...
 
 # default user, leave blank or remove this line
 # for avoid pre-loading the username.
-default_user        {{ user }}
+default_user       krle 
 
 # Focus the password field on start when default_user is set
 # Set to "yes" to enable this feature
@@ -80,10 +89,11 @@ auto_login          yes
 
 # current theme, use comma separated list to specify a set to
 # randomly choose from
-current_theme       debian-joy
+current_theme       default
 
 # Lock file
-lockfile            /var/run/slim.lock
+lockfile            /var/run/slim.pid
 
 # Log file
 logfile             /var/log/slim.log
+

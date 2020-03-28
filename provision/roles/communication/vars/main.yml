@@ -1,13 +1,33 @@
 ---
-communication_packages:
+debian_communication_packages:
   - name: gstreamer1.0-tools
   - name: gstreamer1.0-plugins-good
   - name: libnotify-bin
   - name: notmuch-vim
   - name: offlineimap
 
-communication_certs:
+debian_communication_certs:
   - url: "https://www.thawte.com/roots"
     filename: thawte_Premium_Server_CA.pem
   - url: "https://raw.githubusercontent.com/katmagic/https-everywhere/master/cert-validity/mozilla/builtin-certs"
     filename: Thawte_Premium_Server_CA.crt
+
+ubuntu_communication_packages:
+  - name: gstreamer1.0-tools
+  - name: gstreamer1.0-plugins-good
+  - name: libnotify-bin
+  - name: notmuch-vim
+  - name: offlineimap
+
+ubuntu_communication_certs:
+  - url: "https://www.thawte.com/roots"
+    filename: thawte_Premium_Server_CA.pem
+  - url: "https://raw.githubusercontent.com/katmagic/https-everywhere/master/cert-validity/mozilla/builtin-certs"
+    filename: Thawte_Premium_Server_CA.crt
+
+freebsd_communication_packages:
+  - name: diligent
+  - name: gajim
+  - name: neomutt
+  - name: offlineimap
+  - name: weechat

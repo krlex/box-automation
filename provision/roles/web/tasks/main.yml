@@ -1,14 +1,2 @@
----
-- name: install web packages
-  become: yes
-  with_items: "{{ web_packages }}"
-  apt:
-    pkg: "{{ item.name }}"
-    state: latest
-
-- name: configure chromium
-  become: yes
-  with_items: "{{ web_chromium_configs }}"
-  template:
-    src: "{{ item.name }}.j2"
-    dest: "/etc/chromium.d/{{ item.name }}"
+- name: include os specific tasks
+  include_tasks: "{{ ansible_distribution }}.yml"

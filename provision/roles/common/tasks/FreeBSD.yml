@@ -1,0 +1,32 @@
+---
+- name: install common packages
+  become: yes
+  with_items: "{{ freebsd_common_packages }}"
+  pkgng:
+    name: "{{ item.name }}"
+
+- name: link bash
+  become: yes
+  file:
+    src: /usr/local/bin/bash
+    dest: /bin/bash
+    state: link
+
+- name: configure sysctl
+  become: yes
+  template:
+    src: sysctl.conf.j2
+    dest: /etc/sysctl.conf
+
+- name: configure make
+  become: yes
+  template:
+    src: make.conf.j2
+    dest: /etc/make.conf
+
+- name: configure rc.conf.d
+  become: yes
+  with_items: "{{ freebsd_common_rc }}"
+  template:
+    src: "{{ item.name }}.j2"
+    dest: "/etc/rc.conf.d/{{ item.name }}"

@@ -1,5 +1,5 @@
 ---
-gui_packages:
+debian_gui_packages:
   - name: arandr
   - name: evince
   - name: i3
@@ -15,3 +15,38 @@ gui_packages:
 
     # gui_testing_packages:
     #  - name: rofi
+
+ubuntu_gui_packages:
+  - name: arandr
+  - name: evince
+  - name: i3
+  - name: liferea
+  - name: rxvt-unicode-256color
+  - name: slim
+  - name: unclutter
+  - name: xautolock
+  - name: xinit
+  - name: xserver-xorg
+  - name: rofi
+  - name: libreoffice
+
+    # gui_testing_packages:
+    #  - name: rofi
+
+freebsd_gui_packages:
+  - name: arandr
+  - name: blender
+  - name: dunst
+  - name: evince
+  - name: i3
+  - name: i3status
+  - name: quiterss
+  - name: rofi
+  - name: rxvt-unicode
+  - name: slim
+  - name: slock
+  - name: unclutter
+  - name: xautolock
+  - name: xorg
+  - name: webcamd
+

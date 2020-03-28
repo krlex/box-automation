@@ -1,5 +1,2 @@
----
-- name: alter .gitmodules back
-  become: yes
-  become_user: "{{ user }}"
-  command: "~{{ user }}/repos/dotfiles/bin/switch_submodules_ssh.sh"
+- name: include os specific tasks
+  include_tasks: "{{ ansible_distribution }}.yml"

@@ -1,6 +1,20 @@
 ---
-photo_packages:
+debian_photo_packages:
   - name: geeqie
   - name: gimp
   - name: inkscape
   - name: scrot
+
+ubuntu_photo_packages:
+  - name: geeqie
+  - name: gimp
+  - name: inkscape
+  - name: scrot
+
+freebsd_photo_packages:
+  - name: darktable
+  - name: geeqie
+  - name: gimp
+  - name: inkscape
+  - name: scrot
+

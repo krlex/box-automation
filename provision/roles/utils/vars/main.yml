@@ -1,5 +1,5 @@
 ---
-util_packages:
+debian_util_packages:
   - name: fakeroot
   - name: keepassxc
   - name: pv
@@ -11,3 +11,24 @@ util_packages:
   - name: unp
   - name: unzip
   - name: wajig
+
+ubuntu_util_packages:
+  - name: fakeroot
+  - name: keepassxc
+  - name: pv
+  - name: pwgen
+  - name: silversearcher-ag
+  - name: strace
+  - name: suckless-tools
+  - name: sysstat
+  - name: unp
+  - name: unzip
+  - name: wajig
+
+freebsd_util_packages:
+  - name: keepassxc
+  - name: inotify-tools
+  - name: pv
+  - name: the_silver_searcher
+  - name: unzip
+
