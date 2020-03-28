@@ -16,10 +16,6 @@ debian_audio_packages:
   - name: sox
   - name: sweep
 
-debian_audio_backports_packages:
-  - name: linux-headers-rt-amd64
-  - name: linux-image-rt-amd64
-
 ubuntu_audio_packages:
   - name: audacious
   - name: alsa-tools
@@ -36,6 +32,11 @@ ubuntu_audio_packages:
   - name: sox
   - name: sweep
 
-ubuntu_audio_backports_packages:
-  - name: linux-headers-rt-amd64
-  - name: linux-image-rt-amd64
+freebsd_audio_packages:
+  - name: audacious
+  - name: ardour5
+  - name: invada-studio-plugins-lv2
+  - name: normalize
+  - name: virtual_oss_ctl
+  - name: swhplugins
+  - name: swh-lv2

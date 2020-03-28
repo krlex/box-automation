@@ -1,0 +1,6 @@
+---
+- name: install util packages
+  become: yes
+  with_items: "{{ freebsd_util_packages }}"
+  pkgng:
+    name: "{{ item.name }}"

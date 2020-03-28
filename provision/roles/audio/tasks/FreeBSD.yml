@@ -1,0 +1,6 @@
+---
+- name: install audio packages
+  become: yes
+  with_items: "{{ freebsd_audio_packages }}"
+  package:
+    name: "{{ item.name }}"

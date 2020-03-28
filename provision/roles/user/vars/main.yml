@@ -28,3 +28,13 @@ ubuntu_user_config:
   - name: ".netrc"
   - name: ".ssh"
   - name: "MusE"
+
+freebsd_user_directories:
+  - path: Files
+  - path: Music
+  - path: repos
+
+freebsd_user_config:
+  - name: ".gnupg"
+  - name: ".netrc"
+  - name: ".ssh"

@@ -10,3 +10,11 @@ ubuntu_photo_packages:
   - name: gimp
   - name: inkscape
   - name: scrot
+
+freebsd_photo_packages:
+  - name: darktable
+  - name: geeqie
+  - name: gimp
+  - name: inkscape
+  - name: scrot
+

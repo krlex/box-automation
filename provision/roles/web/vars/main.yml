@@ -22,3 +22,9 @@ ubuntu_web_packages:
 ubuntu_web_chromium_configs:
   - name: incognito
   - name: tor
+
+freebsd_web_packages:
+  - name: elinks
+  - name: firefox
+  - name: rtorrent
+

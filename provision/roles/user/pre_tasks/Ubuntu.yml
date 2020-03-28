@@ -1,7 +1,6 @@
 ---
 - name: create user dirs
   become: yes
-  become_user: "{{ user }}"
   with_items: "{{ ubuntu_user_directories }}"
   file:
     path: "~{{ user }}/{{ item.path }}"

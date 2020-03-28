@@ -25,3 +25,9 @@ ubuntu_network_packages:
 
     # network_syncthing_packages:
       #- name: syncthing
+
+freebsd_network_packages:
+  - name: nmap
+  - name: sshpass
+  - name: syncthing
+  - name: wpa_supplicant_gui

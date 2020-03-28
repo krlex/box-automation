@@ -9,13 +9,13 @@
 - name: configure slim
   become: yes
   template:
-    src: slim.conf.j2
+    src: deb-slim.conf.j2
     dest: /etc/slim.conf
 
 - name: configure trackpoint in X
   become: yes
   template:
-    src: 20-thinkpad.conf.j2
+    src: deb-20-thinkpad.conf.j2
     dest: /usr/share/X11/xorg.conf.d/20-thinkpad.conf
     owner: root
     group: root

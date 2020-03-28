@@ -24,3 +24,10 @@ ubuntu_communication_certs:
     filename: thawte_Premium_Server_CA.pem
   - url: "https://raw.githubusercontent.com/katmagic/https-everywhere/master/cert-validity/mozilla/builtin-certs"
     filename: Thawte_Premium_Server_CA.crt
+
+freebsd_communication_packages:
+  - name: diligent
+  - name: gajim
+  - name: neomutt
+  - name: offlineimap
+  - name: weechat

@@ -1,0 +1,6 @@
+---
+- name: install video packages
+  become: yes
+  with_items: "{{ freebsd_video_packages }}"
+  pkgng:
+    name: "{{ item.name }}"

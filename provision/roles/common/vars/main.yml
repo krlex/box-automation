@@ -32,3 +32,27 @@ ubuntu_common_packages:
   - name: software-properties-common
   - name: virtualenv
   - name: vim-nox
+
+freebsd_common_packages:
+  - name: automount
+  - name: bash
+  - name: beadm
+  - name: curl
+  - name: fish
+  - name: grub2-bhyve
+
+freebsd_common_rc:
+  - name: dbus
+  - name: lockd
+  - name: mountd
+  - name: moused
+  - name: nfsd
+  - name: ntpd
+  - name: routing
+  - name: rpcbind
+  - name: slim
+  - name: statd
+  - name: syscons
+  - name: virtual_oss
+  - name: webcamd
+

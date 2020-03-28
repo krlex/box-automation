@@ -30,9 +30,22 @@ ubuntu_develop_packages:
   - name: vim
   - name: zlib1g-dev
 
-ubuntu_develop_buster_packages:
+ubuntu_develop_bionic_packages:
   - name: nodejs
 
 ubuntu_develop_repositories:
   - name: nodejs
     key: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+
+freebsd_develop_packages:
+  - name: cbsd
+  - name: cmake
+  - name: gist
+  - name: git-lite
+  - name: grub2-bhyve
+  - name: node
+  - name: python
+  - name: tmux
+  - name: vim
+  - name: yarn
+
