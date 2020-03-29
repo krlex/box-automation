@@ -1,7 +1,7 @@
 ---
 - name: install audio packages
   become: yes
-  with_items: "{{ ubuntu_audio_packages }}"
+  with_items: "{{ fedora_audio_packages }}"
   package:
     pkg: "{{ item.name }}"
     state: latest

@@ -19,11 +19,3 @@
     dest: /usr/share/X11/xorg.conf.d/20-thinkpad.conf
     owner: root
     group: root
-
-    #- name: install gui testing packages
-    #  become: yes
-    #  with_items: "{{ gui_testing_packages }}"
-    #  package:
-    #    pkg: "{{ item.name }}"
-    #    default_release: "buster"
-    #    state: latest

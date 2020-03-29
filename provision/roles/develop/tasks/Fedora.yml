@@ -1,0 +1,7 @@
+---
+- name: install develop packages
+  become: yes
+  with_items: "{{ fedora_develop_packages }}"
+  package:
+    pkg: "{{ item.name }}"
+    state: latest

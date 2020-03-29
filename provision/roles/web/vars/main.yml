@@ -17,11 +17,16 @@ ubuntu_web_packages:
   - name: firefox-esr
   - name: browser-plugin-freshplayer-pepperflash
   - name: rtorrent
-    #  - name: xul-ext-adblock-plus
 
 ubuntu_web_chromium_configs:
   - name: incognito
   - name: tor
+
+fedora_web_packages:
+  - name: chromium
+  - name: elinks
+  - name: firefox
+  - name: rtorrent
 
 freebsd_web_packages:
   - name: elinks

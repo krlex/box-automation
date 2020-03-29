@@ -2,7 +2,7 @@
 - name: install common packages
   become: yes
   with_items: "{{ debian_common_packages }}"
-  apt:
+  package:
     pkg: "{{ item.name }}"
     state: latest
 
@@ -59,16 +59,16 @@
   tags:
     - docker
 
-- name: Update apt packages
+- name: Update packages
   become: yes
-  apt:
+  package:
     update_cache: yes
   tags:
     - docker
 
 - name: Install docker
   become: yes
-  apt:
+  package:
     name: docker-ce
     state: present
     update_cache: yes
@@ -77,7 +77,7 @@
 
 - name: Install docker-compose
   become: yes
-  apt:
+  package:
     name: docker-compose
     state: present
     update_cache: yes

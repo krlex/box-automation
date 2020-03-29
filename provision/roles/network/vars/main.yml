@@ -23,8 +23,14 @@ ubuntu_network_packages:
   - name: tor
   - name: wget
 
-    # network_syncthing_packages:
-      #- name: syncthing
+fedora_network_packages:
+  - name: minicom
+  - name: network-manager-applet
+  - name: nmap
+  - name: sshpass
+  - name: tcpdump
+  - name: tor
+  - name: wget
 
 freebsd_network_packages:
   - name: nmap

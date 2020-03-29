@@ -1,0 +1,7 @@
+---
+- name: install communication packages
+  become: yes
+  with_items: "{{ fedora_communication_packages }}"
+  package:
+    pkg: "{{ item.name }}"
+    state: latest

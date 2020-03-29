@@ -2,6 +2,6 @@
 - name: install util packages
   become: yes
   with_items: "{{ debian_util_packages }}"
-  apt:
+  package:
     pkg: "{{ item.name }}"
     state: latest

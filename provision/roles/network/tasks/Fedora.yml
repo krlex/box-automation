@@ -1,7 +1,7 @@
 ---
 - name: install network packages
   become: yes
-  with_items: "{{ debian_network_packages }}"
+  with_items: "{{ fedora_network_packages }}"
   package:
     pkg: "{{ item.name }}"
     state: latest
@@ -14,10 +14,10 @@
     #    default_release: syncthing
     #    state: latest
 
-- name: configure network interfaces
-  become: yes
-  template:
-    src: interfaces.j2
-    dest: /etc/network/interfaces
-  notify:
-    - restart network-manager
+    #- name: configure network interfaces
+    #  become: yes
+    #  template:
+    #    src: interfaces.j2
+    #    dest: /etc/network/interfaces
+    #  notify:
+    #    - restart network-manager

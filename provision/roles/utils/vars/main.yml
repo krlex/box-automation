@@ -25,6 +25,15 @@ ubuntu_util_packages:
   - name: unzip
   - name: wajig
 
+fedora_util_packages:
+  - name: fakeroot
+  - name: keepassxc
+  - name: pv
+  - name: pwgen
+  - name: strace
+  - name: sysstat
+  - name: unzip
+
 freebsd_util_packages:
   - name: keepassxc
   - name: inotify-tools

@@ -9,7 +9,7 @@
 #
 #- name: update for syncthing
 #  become: yes
-#  apt:
+#  package:
 #    apt_cache: yes
 #    state: latest
 #

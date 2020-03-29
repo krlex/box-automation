@@ -2,6 +2,6 @@
 - name: install photo packages
   become: yes
   with_items: "{{ debian_photo_packages }}"
-  apt:
+  package:
     pkg: "{{ item.name }}"
     state: latest

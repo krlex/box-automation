@@ -1,7 +1,7 @@
 ---
 - name: install photo packages
   become: yes
-  with_items: "{{ ubuntu_photo_packages }}"
+  with_items: "{{ fedora_photo_packages }}"
   package:
     pkg: "{{ item.name }}"
     state: latest

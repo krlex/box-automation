@@ -37,6 +37,14 @@ ubuntu_develop_repositories:
   - name: nodejs
     key: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
 
+fedora_develop_packages:
+  - name: cmake
+  - name: python3-devel
+  - name: python3-pip
+  - name: ruby
+  - name: tmux
+  - name: vim
+
 freebsd_develop_packages:
   - name: cbsd
   - name: cmake

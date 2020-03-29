@@ -2,7 +2,7 @@
 - name: install gui packages
   become: yes
   with_items: "{{ ubuntu_gui_packages }}"
-  apt:
+  package:
     pkg: "{{ item.name }}"
     state: latest
 
@@ -23,7 +23,7 @@
     #- name: install gui testing packages
     #  become: yes
     #  with_items: "{{ gui_testing_packages }}"
-    #  apt:
+    #  package:
     #    pkg: "{{ item.name }}"
     #    default_release: "stretch"
     #    state: latest

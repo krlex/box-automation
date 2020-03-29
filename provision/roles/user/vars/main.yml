@@ -29,6 +29,21 @@ ubuntu_user_config:
   - name: ".ssh"
   - name: "MusE"
 
+fedora_user_directories:
+  - path: Files
+  - path: Music
+  - path: repos
+
+fedora_user_repositories:
+  - repo: "https://github.com/krlex/dotfiles"
+    dest: "dotfiles"
+
+fedora_user_config:
+  - name: ".gnupg"
+  - name: ".netrc"
+  - name: ".ssh"
+  - name: "MusE"
+
 freebsd_user_directories:
   - path: Files
   - path: Music

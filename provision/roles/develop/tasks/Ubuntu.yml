@@ -2,14 +2,14 @@
 - name: install develop packages
   become: yes
   with_items: "{{ ubuntu_develop_packages }}"
-  apt:
+  package:
     pkg: "{{ item.name }}"
     state: latest
 
-- name: install develop buster packages
+- name: install develop bionic packages
   become: yes
   with_items: "{{ ubuntu_develop_bionic_packages }}"
-  apt:
+  package:
     pkg: "{{ item.name }}"
-    default_release: "buster"
+    default_release: "bionic"
     state: latest

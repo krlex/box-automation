@@ -2,7 +2,7 @@
 - name: install web packages
   become: yes
   with_items: "{{ debian_web_packages }}"
-  apt:
+  package:
     pkg: "{{ item.name }}"
     state: latest
 

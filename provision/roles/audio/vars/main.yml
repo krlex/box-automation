@@ -32,6 +32,17 @@ ubuntu_audio_packages:
   - name: sox
   - name: sweep
 
+fedora_audio_packages:
+  - name: audacious
+  - name: alsa-tools
+  - name: alsa-utils
+  - name: dbus-x11
+  - name: laditools
+  - name: ncmpcpp
+  - name: pulseaudio-module-jack
+  - name: sox
+  - name: sweep
+
 freebsd_audio_packages:
   - name: audacious
   - name: ardour5

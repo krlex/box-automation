@@ -2,7 +2,7 @@
 - name: install audio packages
   become: yes
   with_items: "{{ debian_audio_packages }}"
-  apt:
+  package:
     pkg: "{{ item.name }}"
     state: latest
 

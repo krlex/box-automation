@@ -2,21 +2,21 @@
 - name: Desktop provisioning
   hosts: all
   pre_tasks:
-    - include: roles/common/pre_tasks/main.yml
-    - include: roles/virtualbox/pre_tasks/main.yml
-    - include: roles/develop/pre_tasks/main.yml
-    - include: roles/user/pre_tasks/main.yml
-    - include: roles/network/pre_tasks/main.yml
+     - include: roles/common/pre_tasks/main.yml
+     - include: roles/virtualbox/pre_tasks/main.yml
+     - include: roles/develop/pre_tasks/main.yml
+     - include: roles/user/pre_tasks/main.yml
+     - include: roles/network/pre_tasks/main.yml
   roles:
-    - common
-    - audio
-    - communication
-    - develop
-    - gui
-    - network
-    - photo
-    - user
-    - utils
-    - virtualbox
-    - video
-    - web
+     - common
+     - audio
+     - communication
+     - develop
+     - gui
+     - network
+     - photo
+     - user
+     - utils
+     - virtualbox
+     - video
+     - web

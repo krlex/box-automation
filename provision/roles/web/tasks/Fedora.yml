@@ -1,7 +1,7 @@
 ---
-- name: install util packages
+- name: install web packages
   become: yes
-  with_items: "{{ ubuntu_util_packages }}"
+  with_items: "{{ fedora_web_packages }}"
   package:
     pkg: "{{ item.name }}"
     state: latest

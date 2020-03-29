@@ -2,7 +2,7 @@
 - name: install network packages
   become: yes
   with_items: "{{ ubuntu_network_packages }}"
-  apt:
+  package:
     pkg: "{{ item.name }}"
     state: latest
 

@@ -25,6 +25,12 @@ ubuntu_communication_certs:
   - url: "https://raw.githubusercontent.com/katmagic/https-everywhere/master/cert-validity/mozilla/builtin-certs"
     filename: Thawte_Premium_Server_CA.crt
 
+fedora_communication_packages:
+  - name: gstreamer1-plugins-good
+  - name: libnotify
+  - name: notmuch-vim
+  - name: offlineimap
+
 freebsd_communication_packages:
   - name: diligent
   - name: gajim

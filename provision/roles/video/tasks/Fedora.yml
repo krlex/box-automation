@@ -1,7 +1,7 @@
 ---
 - name: install video packages
   become: yes
-  with_items: "{{ debian_video_packages }}"
+  with_items: "{{ fedora_video_packages }}"
   package:
     pkg: "{{ item.name }}"
     state: latest

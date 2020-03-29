@@ -5,6 +5,9 @@ debian_video_packages:
 ubuntu_video_packages:
   - name: mpv
 
+fedora_video_packages:
+  - name: mpc
+
 freebsd_video_packages:
   - name: vlc
   - name: mpv

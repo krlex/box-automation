@@ -1,7 +1,7 @@
 ---
 - name: install apt-transport-https
   become: yes
-  apt:
+  package:
     pkg: apt-transport-https
     state: latest
 
@@ -19,8 +19,8 @@
     owner: root
     group: root
 
-- name: Update and upgrade apt packages
+- name: Update and upgrade packages
   become: yes
-  apt:
+  package:
     upgrade: yes
     update_cache: yes

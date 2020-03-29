@@ -2,7 +2,7 @@
 - name: install communication packages
   become: yes
   with_items: "{{ ubuntu_communication_packages }}"
-  apt:
+  package:
     pkg: "{{ item.name }}"
     state: latest
 

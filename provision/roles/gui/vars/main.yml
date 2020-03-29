@@ -13,9 +13,6 @@ debian_gui_packages:
   - name: rofi
   - name: libreoffice
 
-    # gui_testing_packages:
-    #  - name: rofi
-
 ubuntu_gui_packages:
   - name: arandr
   - name: evince
@@ -30,8 +27,18 @@ ubuntu_gui_packages:
   - name: rofi
   - name: libreoffice
 
-    # gui_testing_packages:
-    #  - name: rofi
+fedora_gui_packages:
+  - name: arandr
+  - name: evince
+  - name: i3
+  - name: liferea
+  - name: rxvt-unicode-256color
+  - name: slim
+  - name: xautolock
+  - name: xinit
+  - name: xorg-x11-server-Xorg
+  - name: rofi
+  - name: libreoffice
 
 freebsd_gui_packages:
   - name: arandr

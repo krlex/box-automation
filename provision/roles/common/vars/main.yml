@@ -33,6 +33,18 @@ ubuntu_common_packages:
   - name: virtualenv
   - name: vim-nox
 
+fedora_common_packages:
+  - name: curl
+  - name: fish
+  - name: gpm
+  - name: hplip
+  - name: htop
+  - name: neovim
+  - name: ntfs-3g
+  - name: inotify-tools
+  - name: iptables
+  - name: virtualenv
+
 freebsd_common_packages:
   - name: automount
   - name: bash
