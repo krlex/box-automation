@@ -32,4 +32,4 @@ freebsd_web_packages:
   - name: elinks
   - name: firefox
   - name: rtorrent
-
+  - name: webcamd
