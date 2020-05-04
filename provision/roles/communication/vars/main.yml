@@ -5,6 +5,10 @@ debian_communication_packages:
   - name: libnotify-bin
   - name: notmuch-vim
   - name: offlineimap
+  - name: gajim
+  - name: gajim-omemo
+  - name: gajim-plugininstaller
+  - name: gajim-urlimagepreview
 
 debian_communication_certs:
   - url: "https://www.thawte.com/roots"
@@ -18,6 +22,10 @@ ubuntu_communication_packages:
   - name: libnotify-bin
   - name: notmuch-vim
   - name: offlineimap
+  - name: gajim
+  - name: gajim-omemo
+  - name: gajim-plugininstaller
+  - name: gajim-urlimagepreview
 
 ubuntu_communication_certs:
   - url: "https://www.thawte.com/roots"
