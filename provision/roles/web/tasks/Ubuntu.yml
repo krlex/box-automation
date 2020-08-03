@@ -1,4 +1,18 @@
 ---
+- name: Verify Mozilla that we have the key with the fingerprint
+  become: yes
+  command: apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 2667CA5C
+
+- name: Set up the Mozilla repository
+  become: yes
+  shell:
+    cmd: echo "\ndeb http://downloads.sourceforge.net/project/ubuntuzilla/mozilla/apt all main" | tee -a /etc/apt/sources.list.d/firefox.list
+
+- name: Update and upgrade packages
+  become: yes
+  package:
+    upgrade: yes
+    update_cache: yes
 - name: install web packages
   become: yes
   with_items: "{{ ubuntu_web_packages }}"

@@ -1,7 +1,7 @@
 ---
 - name: install gui packages
   become: yes
-  with_items: "{{ fedora_gui_packages }}"
+  with_items: "{{ debian_gui_packages }}"
   package:
     pkg: "{{ item.name }}"
     state: latest
