@@ -1,6 +1,5 @@
 ---
 - name: create user dirs
-  become: yes
   become_user: "{{ user }}"
   with_items: "{{ debian_user_directories }}"
   file:
