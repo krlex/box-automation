@@ -1,4 +1,4 @@
----
+--
 debian_user_directories:
   - path: Files
   - path: Music
@@ -48,6 +48,10 @@ freebsd_user_directories:
   - path: Files
   - path: Music
   - path: repos
+
+freebsd_user_repositories:
+  - repo: "https://github.com/krlex/dotfiles"
+    dest: "dotfiles"
 
 freebsd_user_config:
   - name: ".gnupg"
