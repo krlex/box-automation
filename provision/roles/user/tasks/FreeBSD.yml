@@ -15,3 +15,47 @@
     owner: "{{ user }}"
     group: "{{ user }}"
     mode: 0777
+
+- name: clone user repositories
+  become: yes
+  become_user: "{{ user }}"
+  with_items: "{{ freebsd_user_repositories }}"
+  git:
+    repo: "{{ item.repo }}"
+    dest: "~{{ user }}/repos/{{ item.dest }}"
+    accept_hostkey: yes
+    update: yes
+    recursive: no
+
+- name: init configuration of programs
+  become: yes
+  become_user: "{{ user }}"
+  command: "~{{ user }}/repos/dotfiles/init.sh"
+  args:
+    creates: "~{{ user }}/.vim"
+
+- name: configure git
+  become: yes
+  become_user: "{{ user }}"
+  template:
+    src: gitconfig.j2
+    dest: "~{{ user }}/.gitconfig"
+
+- name: link config
+  become: yes
+  become_user: "{{ user }}"
+  with_items: "{{ freebsd_user_config }}"
+  file:
+    src: "~{{ user }}/Files/{{ item.name }}"
+    dest: "~{{ user }}/{{ item.name }}"
+    force: yes
+    state: link
+
+- name: setup regular mail checking
+  become: yes
+  become_user: "{{ user }}"
+  cron:
+    name: "mail checking"
+    job: "~/bin/cron.sh"
+    minute: "*"
+    user: "{{ user }}"

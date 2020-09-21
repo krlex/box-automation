@@ -1,6 +1,17 @@
 #!/bin/sh -uxe
 
-install_pip () {
+freebsd_pip () {
+        $SUDO pip install ansible -U
+        $SUDO pip install vex -U
+        export ANSIBLE_HOST_KEY_CHECKING=False
+        PATH="${HOME}/.local/bin:${PATH}"
+        virtual_env="provision"
+        virtual_env_path=~/.virtualenvs/$virtual_env
+        vex --make $virtual_env pip install -U pip
+        source $virtual_env_path/bin/activate
+}
+
+linux_pip () {
         $SUDO pip3 install ansible -U
         $SUDO pip3 install vex -U
         export ANSIBLE_HOST_KEY_CHECKING=False
@@ -17,7 +28,7 @@ prepare_ubuntu() {
         $SUDO apt install build-essential curl sshpass vim python3-pip -y
         [ $(uname -m) == "aarch64" ] && $SUDO apt install python3-dev libffi-dev libssl-dev -y
 
-        install_pip
+        linux_pip
 
         set +x
         echo
@@ -32,7 +43,7 @@ prepare_debian() {
         $SUDO apt install build-essential curl sshpass vim python3-pip -y
         [ $(uname -m) == "aarch64" ] && $SUDO apt install python3-dev libffi-dev libssl-dev -y
 
-        install_pip
+        linux_pip
 
         set +x
         echo
@@ -42,10 +53,10 @@ prepare_debian() {
 }
 
 prepare_fedora() {
-        $SUDO dnf install vim curl python3 python3-pip -y
         $SUDO dnf update -y
+        $SUDO dnf install vim curl python3 python3-pip -y
 
-        install_pip
+        linux_pip
 
         set +x
         echo
@@ -54,23 +65,25 @@ prepare_fedora() {
         ansible --version
 }
 
-#prepare_freebsd() {
-#        $SUDO pkg install vim-console curl py37-pip -y
-#        $SUDO pkg update -y
-#
-#        install_pip
-#
-#        set +x
-#        echo
-#        echo "   FreeBSD System ready for box-automation."
-#        echo
-#        ansible --version
-#}
+prepare_freebsd() {
+        sudo pkg update -y
+        sudo pkg install -y vim-console curl py37-pip
+
+        freebsd_pip
+
+        set +x
+        echo
+        echo "   FreeBSD System ready for box-automation."
+        echo
+        ansible --version
+}
 
 if [  -f /etc/os-release ]; then
         . /etc/os-release
 elif [ -f /etc/debian_version ]; then
       $ID=debian
+elif uname -a | awk '{print $1}' | grep FreeBSD;then
+      prepare_freebsd
 fi
 
 if [[ $EUID -ne 0 ]]; then
@@ -89,9 +102,9 @@ case $ID in
         'fedora')
                 prepare_fedora
         ;;
-        #'freebsd')
-        #        prepare_freebsd
-        #;;
+        'freebsd')
+                prepare_freebsd
+        ;;
 
         *)
                 usage

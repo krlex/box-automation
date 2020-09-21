@@ -40,7 +40,6 @@ fedora_communication_packages:
   - name: offlineimap
 
 freebsd_communication_packages:
-  - name: diligent
   - name: gajim
   - name: neomutt
   - name: offlineimap
