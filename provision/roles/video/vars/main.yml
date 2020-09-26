@@ -1,13 +1,17 @@
 ---
 debian_video_packages:
   - name: mpv
+  - name: kdenlive
 
 ubuntu_video_packages:
   - name: mpv
+  - name: kdenlive
 
 fedora_video_packages:
   - name: mpc
+  - name: kdenlive
 
 freebsd_video_packages:
   - name: vlc
   - name: mpv
+  - name: kdenlive
