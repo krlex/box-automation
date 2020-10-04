@@ -15,3 +15,5 @@ freebsd_video_packages:
   - name: vlc
   - name: mpv
   - name: kdenlive
+  - name: drm-kmod
+
