@@ -55,6 +55,7 @@ freebsd_common_packages:
   - name: curl
   - name: fish
   - name: grub2-bhyve
+  - name: terraform
   - name: jq
 
 freebsd_common_rc:
