@@ -6,6 +6,16 @@
     shell: /usr/bin/fish
     groups: cdrom,floppy,sudo,audio,dip,video,plugdev,netdev
 
+- name: create user dirs
+  become: yes
+  with_items: "{{ debian_user_directories }}"
+  file:
+    path: "~{{ user }}/{{ item.path }}"
+    state: directory
+    owner: "{{ user }}"
+    group: "{{ user }}"
+    mode: 0777
+
 - name: clone user repositories
   become: yes
   become_user: "{{ user }}"

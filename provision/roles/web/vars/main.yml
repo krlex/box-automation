@@ -3,7 +3,6 @@ debian_web_packages:
   - name: chromium
   - name: elinks
   - name: firefox-mozilla-build
-  - name: browser-plugin-freshplayer-pepperflash
   - name: rtorrent
     #  - name: xul-ext-adblock-plus
 

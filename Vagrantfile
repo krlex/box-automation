@@ -5,7 +5,7 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "krlex/freebsd-12.1.2-cbsd"
+  config.vm.box = "debian/buster64"
   config.vm.network :private_network, ip: "192.168.88.11"
   config.vm.synced_folder ".", "/vagrant", type: "rsync"
   config.vm.provision :ansible do |ansible|

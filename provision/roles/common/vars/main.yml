@@ -1,7 +1,6 @@
 ---
 debian_common_packages:
   - name: apt-file
-  - name: browser-plugin-freshplayer-pepperflash
   - name: curl
   - name: fish
   - name: gist
