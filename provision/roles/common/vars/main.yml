@@ -17,7 +17,6 @@ debian_common_packages:
   - name: vim-nox
 
 ubuntu_common_packages:
-  - name: apt-file
   - name: browser-plugin-freshplayer-pepperflash
   - name: curl
   - name: fish
@@ -25,14 +24,12 @@ ubuntu_common_packages:
   - name: gpm
   - name: hplip
   - name: htop
-  - name: neovim
   - name: ntfs-3g
   - name: inotify-tools
   - name: iptables
   - name: jq
   - name: software-properties-common
   - name: virtualenv
-  - name: vim-nox
 
 fedora_common_packages:
   - name: curl

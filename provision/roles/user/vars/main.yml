@@ -24,7 +24,7 @@ ubuntu_user_repositories:
     dest: "dotfiles"
 
 ubuntu_user_config:
-  - name: ".gnupg"
+        #  - name: ".gnupg"
   - name: ".netrc"
   - name: ".ssh"
   - name: "MusE"

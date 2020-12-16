@@ -11,7 +11,7 @@ debian_web_chromium_configs:
   - name: tor
 
 ubuntu_web_packages:
-  - name: chromium
+        #  - name: chromium
   - name: elinks
   - name: firefox-mozilla-build
   - name: browser-plugin-freshplayer-pepperflash

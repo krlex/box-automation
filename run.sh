@@ -86,7 +86,7 @@ elif uname -a | awk '{print $1}' | grep FreeBSD;then
       prepare_freebsd
 fi
 
-if [[ $EUID -ne 0 ]]; then
+if [[ $ID -ne 0 ]]; then
   SUDO='sudo -H'
 else
   SUDO=''

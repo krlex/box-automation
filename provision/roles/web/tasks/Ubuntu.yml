@@ -20,10 +20,10 @@
     pkg: "{{ item.name }}"
     state: latest
 
-- name: configure chromium
-  become: yes
-  with_items: "{{ ubuntu_web_chromium_configs }}"
-  template:
-    src: "{{ item.name }}.j2"
-    dest: "/etc/chromium.d/{{ item.name }}"
+    #- name: configure chromium
+    #  become: yes
+    #  with_items: "{{ ubuntu_web_chromium_configs }}"
+    #  template:
+    #    src: "{{ item.name }}.j2"
+    #    dest: "/etc/chromium.d/{{ item.name }}"
 

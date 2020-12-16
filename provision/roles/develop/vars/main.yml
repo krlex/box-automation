@@ -30,7 +30,7 @@ ubuntu_develop_packages:
   - name: vim
   - name: zlib1g-dev
 
-ubuntu_develop_bionic_packages:
+ubuntu_develop_focal_packages:
   - name: nodejs
 
 ubuntu_develop_repositories:

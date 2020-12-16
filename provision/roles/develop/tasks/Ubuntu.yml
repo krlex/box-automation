@@ -6,10 +6,10 @@
     pkg: "{{ item.name }}"
     state: latest
 
-- name: install develop bionic packages
+- name: install develop focal packages
   become: yes
-  with_items: "{{ ubuntu_develop_bionic_packages }}"
+  with_items: "{{ ubuntu_develop_focal_packages }}"
   package:
     pkg: "{{ item.name }}"
-    default_release: "bionic"
+    default_release: "focal"
     state: latest
