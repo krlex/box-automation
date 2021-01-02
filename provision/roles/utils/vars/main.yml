@@ -40,4 +40,5 @@ freebsd_util_packages:
   - name: pv
   - name: the_silver_searcher
   - name: unzip
+  - name: py37-markupsafe
 
