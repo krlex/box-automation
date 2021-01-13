@@ -8,11 +8,13 @@ debian_common_packages:
   - name: hplip
   - name: htop
   - name: neovim
+  - name: neofetch
   - name: ntfs-3g
   - name: inotify-tools
   - name: iptables
   - name: jq
   - name: software-properties-common
+  - name: ranger
   - name: virtualenv
   - name: vim-nox
 
@@ -26,11 +28,13 @@ ubuntu_common_packages:
   - name: hplip
   - name: htop
   - name: neovim
+  - name: neofetch
   - name: ntfs-3g
   - name: inotify-tools
   - name: iptables
   - name: jq
   - name: software-properties-common
+  - name: ranger
   - name: virtualenv
   - name: vim-nox
 
@@ -41,21 +45,26 @@ fedora_common_packages:
   - name: hplip
   - name: htop
   - name: neovim
+  - name: neofetch
   - name: ntfs-3g
   - name: inotify-tools
   - name: iptables
   - name: jq
+  - name: ranger
   - name: virtualenv
 
 freebsd_common_packages:
   - name: automount
   - name: bash
   - name: beadm
+  - name: grub2-bhyve
   - name: curl
   - name: fish
-  - name: grub2-bhyve
-  - name: terraform
   - name: jq
+  - name: neovim
+  - name: neofetch
+  - name: terraform
+  - name: py37-ranger
 
 freebsd_common_rc:
   - name: dbus

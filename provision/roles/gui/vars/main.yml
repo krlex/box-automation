@@ -44,7 +44,6 @@ freebsd_gui_packages:
   - name: arandr
   - name: blender
   - name: dunst
-  - name: evince
   - name: i3
   - name: i3status
   - name: quiterss
