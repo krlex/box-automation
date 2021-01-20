@@ -65,6 +65,7 @@ freebsd_common_packages:
   - name: neofetch
   - name: terraform
   - name: py37-ranger
+  - name: py37-pynvim
 
 freebsd_common_rc:
   - name: dbus
