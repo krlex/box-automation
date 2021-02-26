@@ -42,7 +42,6 @@ fedora_gui_packages:
 
 freebsd_gui_packages:
   - name: arandr
-  - name: blender
   - name: dunst
   - name: i3
   - name: i3status
