@@ -56,4 +56,3 @@ freebsd_develop_packages:
   - name: tmux
   - name: vim
   - name: yarn
-
