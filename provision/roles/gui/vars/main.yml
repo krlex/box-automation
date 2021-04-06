@@ -4,7 +4,7 @@ debian_gui_packages:
   - name: evince
   - name: i3
   - name: liferea
-  - name: rxvt-unicode-256color
+  - name: terminator
   - name: slim
   - name: unclutter
   - name: xautolock
@@ -18,7 +18,7 @@ ubuntu_gui_packages:
   - name: evince
   - name: i3
   - name: liferea
-  - name: rxvt-unicode-256color
+  - name: terminator
   - name: slim
   - name: unclutter
   - name: xautolock
@@ -32,7 +32,7 @@ fedora_gui_packages:
   - name: evince
   - name: i3
   - name: liferea
-  - name: rxvt-unicode-256color
+  - name: terminator
   - name: slim
   - name: xautolock
   - name: xinit
@@ -54,4 +54,3 @@ freebsd_gui_packages:
   - name: xautolock
   - name: xorg
   - name: webcamd
-
