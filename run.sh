@@ -67,7 +67,7 @@ prepare_fedora() {
 
 prepare_freebsd() {
         sudo pkg update -y
-        sudo pkg install -y vim-console curl py37-pip
+        sudo pkg install -y vim-console curl py38-pip
 
         freebsd_pip
 

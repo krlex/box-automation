@@ -44,7 +44,6 @@ fedora_audio_packages:
   - name: sweep
 
 freebsd_audio_packages:
-  - name: ardour5
   - name: invada-studio-plugins-lv2
   - name: normalize
   - name: virtual_oss_ctl
