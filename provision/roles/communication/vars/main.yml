@@ -42,5 +42,4 @@ fedora_communication_packages:
 freebsd_communication_packages:
   - name: gajim
   - name: neomutt
-  - name: offlineimap
   - name: weechat
